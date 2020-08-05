@@ -31,7 +31,8 @@ function generateRandom() {
     pinGenerator.value = number;
     generatedPin = number;
     hideDefault();
-    submitBtn.style.display = 'block';
+    submitBtn.style.display = 'inline-block';
+
 }
 
 // Pin Submitting button
@@ -60,7 +61,6 @@ function tryCount() {
     const insertValue = document.getElementById('pinInsert').value;
     count++;
 
-    console.log(`${count} & Generated = ${generatedPin} & insertValue= ${insertValue}`);
     if (count == 1 && generatedPin !== insertValue) {
         tryLeft.textContent = '2 try left';
     } else if (count == 2 && generatedPin !== insertValue) {
